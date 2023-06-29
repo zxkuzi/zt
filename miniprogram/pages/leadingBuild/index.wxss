@@ -1,0 +1,111 @@
+/* pages/leadingBuild/index.wxss */
+.container{
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+.page-body{
+  height: 480rpx;
+}
+swiper{
+  height: 480rpx;
+}
+.stage{
+  margin-bottom: 60rpx;
+}
+/* .title{
+  margin-bottom: 40rpx;
+}
+.content{
+  text-indent: 2em;
+} */
+
+.swiper-title{
+  margin-bottom: 40rpx;
+  color: #ccc;
+  /* background: #d81e06; */
+  font-size: 80rpx;
+  font-weight: bold;
+}
+.textContent{
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  margin-top: 20rpx;
+}
+.content{
+  text-indent: 2em;
+  line-height: 60rpx;
+  color: #514a47;
+}
+
+page{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.imgContainer{
+  width: 100%;
+  height:480rpx;
+  vertical-align: bottom;
+  margin-top: -10rpx;
+  /* display: block; */
+}
+.navbar{
+  flex: none;
+  display: flex;
+  width: 100%;
+  height: 120rpx;
+}
+.navbar .item{
+  position: relative;
+  flex: auto;
+  text-align: center;
+  line-height: 120rpx;
+  border: none;
+  background-color: #fff;
+}
+.navbar .item.active{
+  /* border:1px solid red; */
+  border:none;
+
+}
+.item .innerClass {
+  padding-left: 10rpx;
+  border-left: 10rpx solid #fff;
+  color: #d2d2d2;
+  font-weight: 600;
+  font-size: 40rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.item.active .innerClass{
+  height: 60rpx;
+  width: 100%;
+  color: #010101;
+  font-weight: 600;
+  font-size: 40rpx;
+  line-height: 60rpx;
+  border-left: 10rpx solid #e3deda;
+  padding-left: 10rpx;
+}
+.navbar .item.active:after{
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #FFCC00;
+}
+.text-swiper{
+  width: 500rpx;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  bottom:20rpx;
+  color: #000;
+  font-weight: 550;
+  opacity: 0.5;
+  font-size: 30rpx;
+  transform: translateX(-50%);
+}

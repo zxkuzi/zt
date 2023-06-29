@@ -1,0 +1,8 @@
+<view class="container1" wx:if="{{!loginFlag}}">
+  
+  <view class="content1" style="">
+    <image src="cloud://zt-industrial-part-2dp7h26c5ff86.7a74-zt-industrial-part-2dp7h26c5ff86-1304549895/shouyeSwiper/lxh.jpg"></image>
+    <text class="kf">此模块正在开发中...</text>
+    <!-- <view bindtap="goToLogin" class="tx">去登录</view> -->
+  </view>
+</view>

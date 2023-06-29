@@ -1,0 +1,65 @@
+<!--index.wxml-->
+<view class="container1">
+  <div class="container">
+    <view class="topTitle">
+      郑投产业园信用+
+    </view>
+    <view class="loginView">
+      <div class="formData">
+        <form bindsubmit="login" bindregestry="regestry">
+          <view class="inputContainer" wx:if="{{flag}}"> 
+            <icon class=" iconfont icon-qiyexinxi"></icon>
+            <input placeholder-class="placeholder-style"
+            bindinput="regestyName"
+            type="text" name="regestyName" placeholder="请输入企业名称" class="input-item"/>
+          </view>
+          <view class="inputContainer"> 
+            <icon class=" iconfont icon-dengluzhanghao"></icon>
+            <input placeholder-class="placeholder-style"
+            bindinput="getCompanyNo"
+            model:value="{{userNameVal}}"
+            type="text" name="userName" placeholder="请输入社会统一信用代码" class="input-item"/>
+          </view>
+          <view class="inputContainer">
+            <icon class=" iconfont icon-mimasuo-"></icon>
+            <input placeholder-class="placeholder-style" 
+            bindinput="getCompanyPassword"
+            model:value="{{passwordVal}}"
+            type="password" name="password" placeholder="请输入密码" class="input-item" />
+            
+          </view>
+          <view>
+            
+            <view  wx:if="{{flag}}">
+              <view class="submit"  style="width:80%;margin:0 auto;" bindtap="regestry">注 册</view>
+              <view class="gzc backlogin" bindtap="backLogin">已有账号,去登录</view>
+            </view>
+            <view style="width:80%;margin:0 auto;" wx:else>
+              <view class="submit" bindtap="login">登 录</view>
+              <view class="gzc" bindtap="gzc">暂无账号,去注册</view>
+            </view>
+            
+            
+          </view>
+          
+          
+          
+        </form>
+
+      </div>
+      
+    </view>
+    <!-- <div class="login-wrapper">
+            <div class="header">Login</div>
+            <div class="form-wrapper">
+                <input type="text" name="username" placeholder="username" class="input-item" />
+                <input type="password" name="password" placeholder="password" class="input-item" />
+                <div class="btn">Login</div>
+            </div>
+            <div class="msg">
+                Don't have account?
+                <a href="#">Sign up</a>
+            </div>
+        </div> -->
+  </div>
+</view>

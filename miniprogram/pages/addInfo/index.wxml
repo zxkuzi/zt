@@ -1,0 +1,86 @@
+<!--pages/storage/storage.wxml-->
+<view class="container">
+  <view class="exam-item">
+    <scroll-view scroll-y="true" scroll-with-animation="true">
+      <view class="item-text">选择企业类型</view>
+      <view class="item-content" bindtap="onselectTap" bindtap="showModal">{{areaCode}}</view>
+      <view class="item-text">社会统一信用代码</view>
+      <input class="input" type="text" disabled placeholder="请输入社会统一信用代码" model:value="{{ prodCode }}" />
+      <view class="item-text">企业名称</view>
+      <input class="input" type="text" placeholder="请输入企业名称" model:value="{{ supplier }}" />
+
+      <block>
+        <view class="item-text item-text1">营业执照</view>
+        <view class="img">
+          <block wx:for="{{ picArr }}" wx:key="index">
+            <view class="img2">
+              <icon bindtap="delete" data-id="{{index}}" class="iconfont icon-shanchu"></icon>
+              <image bindtap="previewImage" data-url="{{item.path}}" src="{{item.path}}"></image>
+            </view>
+          </block>
+          <view class="iconContainer">
+            <icon wx:if="{{picArr.length<9}}" bindtap="upPhoto" style="font-size: 180rpx;display: block;background-color: #ccc;text-align: center;" class="iconfont icon-shangchuan"></icon>
+          </view>
+        </view>
+      </block>
+      <block>
+        <view class="item-text item-text1">资质证书</view>
+        <view class="img">
+          <block wx:for="{{ zsArr }}" wx:key="index">
+            <view class="img2">
+              <icon bindtap="delete1" data-id="{{index}}" class="iconfont icon-shanchu"></icon>
+              <image bindtap="previewImage" data-url="{{item.path}}" src="{{item.path}}"></image>
+            </view>
+          </block>
+          <view class="iconContainer">
+            <icon wx:if="{{zsArr.length<9}}" bindtap="upPhoto1" style="font-size: 180rpx;display: block;background-color: #ccc;text-align: center;" class="iconfont icon-shangchuan"></icon>
+          </view>
+        </view>
+      </block>
+      <block>
+        <view class="item-text item-text1">企业荣誉</view>
+        <view class="img">
+          <block wx:for="{{ qyryArr }}" wx:key="index">
+            <view class="img2">
+              <icon bindtap="delete2" data-id="{{index}}" class="iconfont icon-shanchu"></icon>
+              <image bindtap="previewImage" data-url="{{item.path}}" src="{{item.path}}"></image>
+            </view>
+          </block>
+          <view class="iconContainer">
+            <icon wx:if="{{qyryArr.length<9}}" bindtap="upPhoto2" style="font-size: 180rpx;display: block;background-color: #ccc;text-align: center;" class="iconfont icon-shangchuan"></icon>
+          </view>
+        </view>
+      </block>
+      <block>
+        <view class="item-text item-text1">其它</view>
+        <view class="img">
+          <block wx:for="{{ otherArr }}" wx:key="index">
+            <view class="img2">
+              <icon bindtap="delete3" data-id="{{index}}" class="iconfont icon-shanchu"></icon>
+              <image bindtap="previewImage" data-url="{{item.path}}" src="{{item.path}}"></image>
+            </view>
+          </block>
+          <view class="iconContainer">
+            <icon wx:if="{{otherArr.length<9}}" bindtap="upPhoto3" style="font-size: 180rpx;display: block;background-color: #ccc;text-align: center;" class="iconfont icon-shangchuan"></icon>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+    <view class="button">
+      <button id="btn" bindtap="StorageDetailsTap">提 交</button>
+    </view>
+    <!--dialog隐藏区域  -->
+    <view class="modals modals-bottom-dialog" hidden="{{hideModal}}">
+      <view class="modals-cancel" bindtap="hideModal"></view>
+      <view class="bottom-dialog-body bottom-pos" animation="{{animationData}}">
+        <view class="dialog-title">选择企业类型</view>
+        <view class="dialog-box">
+          <view bindtap="change" wx:for="{{areaList}}" wx:key="index" class="dialog-item {{index==indexstatus?'bg-blue':''}}" data-dialogid="{{index}}" bindtap="getValueTap">{{item}}</view>
+        </view>
+        <view class="button dialog-btn">
+          <button id="confirm" bindtap="hideModal">确定</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

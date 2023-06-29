@@ -1,0 +1,27 @@
+.container1{
+  width: 100%;
+  width: 100vw;
+  height: 100vh;
+}
+.content1{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.content1 text{
+  color:#514a47;
+} 
+.content1 view {
+  width: 100%;
+  background-color: #c49a74;
+  text-align: center;
+  margin-top: 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #efe3d2;
+  border-radius: 40rpx;
+}
+.content1 .tx{
+  background-color: #aa0202;
+}

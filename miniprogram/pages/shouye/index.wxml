@@ -1,0 +1,74 @@
+<view class="conview">
+  <view>
+    <view class="con">
+      <image src="./../../images/logo.jpg" mode="" />
+      <view class="con1">
+        <view class="cxy">郑投科技创新园</view>
+        <view>ZHENGTOU TECHNOLOGY CREATIVE ZONE</view>
+      </view>
+    </view>
+  </view>
+  <view class="con-text">
+    <view style="display: flex;align-items: center;">
+      <icon class="iconfont icon-huobao"></icon>
+      <view class="sd">郑州市第二批社会信用体系建设示范单位试点</view>
+    </view>
+    <icon class="iconfont icon-biaoqian first"></icon>
+    <icon class="iconfont icon-biaoqian second"></icon>
+  </view>
+  
+  <view class="con-img">
+    <view class="left">
+      <image src="cloud://zt-industrial-part-2dp7h26c5ff86.7a74-zt-industrial-part-2dp7h26c5ff86-1304549895/shouyeSwiper/lxh3.png"></image>
+    </view>
+    <view class="right">
+      <view class="iconview" bindtap="goLeadingBuild">
+        <icon class="iconfont icon-zuzhizeren"></icon>
+        <view>党建引领</view>
+      </view>
+      <view class="iconview" bindtap="goInfoCollection">
+        <icon class="iconfont icon-shoujizhengli"></icon>
+        <view>信息归集</view>
+      </view>
+      <view class="iconview" bindtap="gopj">
+        <icon class="iconfont icon-icon_wanggekaohepingjia"></icon>
+        <view>综合评价</view>
+      </view>
+      <view class="iconview"  bindtap="goAdvice">
+        <icon class="iconfont icon-a-customercomplaint"></icon>
+        <view>投诉与建议</view>
+      </view>
+    </view>
+  </view>
+  <view class="gg">公告</view>
+  <view class="notice_box">
+    
+    <view class="notice">
+      <icon class="iconfont icon-xiaolaba"></icon>
+    </view>
+
+    <view class="swiper_box">
+      <swiper vertical="true" autoplay="true" circular="true" interval="3000" duration='300' easing-function='easeInOutCubic'>
+        <block wx:for='{{msgList}}' wx:key='index'>
+          <swiper-item>
+            <view class="swiper-item">
+              <view class="newsp">最新</view>
+              <view class="notice-title">{{item.title}}</view>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+  <view class="gg">园区效果图</view>
+  <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="si-swiper">
+        <block wx:for="{{picArr}}" wx:for-item="item" wx:key="*this">
+          <swiper-item class="si">
+           <image src="{{item}}"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+</view>

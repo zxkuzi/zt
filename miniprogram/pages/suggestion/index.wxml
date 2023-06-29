@@ -1,0 +1,51 @@
+<!--pages/infoCollection/index.wxml-->
+<view class="container1" wx:if="{{!loginFlag}}">
+  <view class="content1">
+    <image class="lxh" src="cloud://zt-industrial-part-2dp7h26c5ff86.7a74-zt-industrial-part-2dp7h26c5ff86-1304549895/shouyeSwiper/lxh2.jpg" mode=""/>
+    <view bindtap="goToLogin" class="tx">去登录</view>
+  </view>
+</view>
+
+<view class="container" wx:else>
+  <view class="content" wx:if="{{userName == 'admin'}}">
+    <scroll-view scroll-y="true">
+      <view wx:for="{{suggestArr}}" class="item-container">
+        <view class="itemr">
+          <view><span>账号:</span>{{item.companyName}}</view>
+          <view><span>反馈类型:</span>{{item.type}}</view>
+          <view><span>联系方式:</span>{{item.tel}}</view>
+          <view class="area">
+            <view class="input-placeholder">{{item.decription}}</view>
+          </view>
+        </view>
+
+
+      </view>
+    </scroll-view>
+    <!-- <icon class=" iconfont icon-jiesuo"/>
+    <text>该模块尚未开通</text> -->
+  </view>
+  <view class="trueContent" wx:else>
+    <view>
+      <view class="fk">反馈类别</view>
+      <view class="type">
+        <view class="{{currentTab==index ? 'active' : ''}}" wx:for="{{typeArr}}" data-name="{{item}}" data-idx="{{index}}" wx:key="unique" bindtap="getType">{{item}}</view>
+      </view>
+    </view>
+    <view>
+      <view class="fk">详细描述</view>
+      <view class="section">
+        <textarea model:value="{{decription}}" placeholder="请填写10字以上(最多200字)的问题描述，以便我们更好的帮助您解决问题" placeholder-style="input-placeholder" placeholder-class="input-placeholder" maxlength="200"></textarea>
+      </view>
+    </view>
+    <view style="margin-top: 30rpx;">
+      <view class="fk">联系方式</view>
+      <view class="section">
+        <input model:value="{{tel}}" placeholder-class="input-placeholder1" placeholder="留下联系方式，我们可能会联系您进行沟通" />
+      </view>
+    </view>
+    <view>
+      <view class="submit" bindtap="submit">提交反馈</view>
+    </view>
+  </view>
+</view>

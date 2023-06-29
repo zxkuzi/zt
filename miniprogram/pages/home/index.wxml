@@ -1,0 +1,57 @@
+<view class="container" style="position: relative;">
+<scroll-view>
+<image class="bg" src="cloud://zt-industrial-part-2dp7h26c5ff86.7a74-zt-industrial-part-2dp7h26c5ff86-1304549895/shouyeSwiper/bg1.jpg"></image>
+<view class="navbar">
+    <text wx:for="{{navbar}}" data-idx="{{index}}" data-itemdata="{{item}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap"><text class="innerClass">{{item}}</text></text>
+  </view>
+  <view wx:if="{{currentTab == 0}}">
+      <view class="header">
+        <view>郑投科技创新园入园企业信用等级</view>
+        <view>评价标准</view>
+      </view>
+      <view class="content">
+        <text>为推进郑投产业园公司及郑投科技创新园园区（以下简称：园区）信用体系建设，强化信用监管，促进园区形成诚实守信、合法经营的良好氛围，特制定本评价标准。</text>
+        <text style="display: block;" class="t1">一、信用等级评价原则</text>
+        <text class="t2">企业信用等级评价坚持公平和审慎的原则，严格按照规定的标准和程序进行，以保证入园企业信用等级评价的权威性和公平性。</text>
+        <text style="display: block;" class="t1">二、信用等级的划分</text>
+        <text style="display: block;" class="t4">(一)信用等级划分标准</text>
+        <text class="t2">信用等级分为A、B、C、D四个等级。信用等级评定根据入园企业信用信息完善程度、经营诚信情况、投诉举报、行政处罚等进行综合评定。</text>
+        <text class="t2">信用等级评分满分为100分，评分由园区根据《园区企业信用等级评分表》内容情况对入园企业进行评分。评分为90分（含）及以上，评定为A级；评分为70分（含）以上90分（不含）以下的，评定为B级；评分为60分（含）以上70分（不含）的，评定为C级；评分为60分（不含）以下或连续2次被评为C级的，评定为D级。</text>
+        <text style="display: block;" class="t4">(二）信用等级级别定义</text>
+        <text class="t2">A级为信用良好。企业信用信息完整，无不良经营行为，无政府相关部门的行政处罚决定，主动公开企业的经营方面的相关信息，未发生对园区有不良影响事件的，及时处理各项投诉举报的，及时缴纳园区各项费用。</text>
+        <text class="t2">B级为信用较好。企业信用信息较为完整，无不良经营行为或有不良经营行为积极改正的，无政府相关部门行政处罚，能够公开企业的经营方面的相关信息，能够处理各项投诉举报的，及时缴纳园区各项费用。</text>
+        <text class="t2">C级为信用一般。有过不良经营行为，有过政府相关行政处罚，对园区产生过不良影响的，存在过拖欠员工工资、园区费用等情况的。</text>
+        <text class="t2">D级为信用较差。连续2次被评为C级的，对园区产生过严重不良影响的。</text>
+        <text style="display: block;" class="t4">(二）信用等级级别定义</text>
+       
+        
+      </view>
+      <view class="imgStand">
+          <image src="../../images/stand.png" mode=""/>
+      </view>
+  </view>
+  <view wx:if="{{currentTab == 1}}">
+    <view class="header">
+        <view>郑投科技创新园信用评价公示</view>
+    </view>
+    <view class="content">
+        <text>按照郑投产业园公司《郑投科技创新园信用管理规章制度》有关要求，园区组织开展了对入园企业2023年度的信用评价，现将评价结果予以公示，公示时间X天（2023年X月X日至X月X日）。</text>
+        <text class="t2 t5">被公示的参评单位如对评价等级结果有异议，请在公示期内向郑投产业园公司提交书面申诉书（申诉书由企业法定代表人签名并加盖公章，申诉事项及主张需清晰、明确，证据资料需完整、充分）。</text>
+        <text class="t2 t5">受理机构：郑州投控科技产业园区发展有限公司（综合部）</text>
+        <text class="t2 t5">电话：0371-67199333</text>
+        <text class="t2 t5">地址：郑投科技创新园3号楼3楼</text>
+        <view>
+            <text class="t2 t5 t6 t7">郑州投控科技产业园区发展有限公司</text>
+            <text class="t2 t5 t6">2023年X月X日</text>
+        </view>
+    </view>
+    <view class="header cell">
+        <view>郑投科技创新园信用评价公示表</view>
+    </view>
+    <view class="imgStand1">
+          <image src="../../images/stand1.png" mode=""/>
+      </view>
+    
+  </view>
+</scroll-view>
+</view>

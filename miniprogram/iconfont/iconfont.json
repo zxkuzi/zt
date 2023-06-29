@@ -1,0 +1,58 @@
+{
+  "id": "4133854",
+  "name": "郑投小程序",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "4611717",
+      "name": "警告-2",
+      "font_class": "jinggao-",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "4723086",
+      "name": "class-item",
+      "font_class": "class-item",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    },
+    {
+      "icon_id": "4723094",
+      "name": "home",
+      "font_class": "home1",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "4723096",
+      "name": "stats-bars",
+      "font_class": "stats-bars",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "5338811",
+      "name": "意见反馈",
+      "font_class": "yijianfankui",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "3685116",
+      "name": "人员管理",
+      "font_class": "renyuanguanli",
+      "unicode": "e650",
+      "unicode_decimal": 58960
+    },
+    {
+      "icon_id": "577364",
+      "name": "首页",
+      "font_class": "shouye",
+      "unicode": "e751",
+      "unicode_decimal": 59217
+    }
+  ]
+}

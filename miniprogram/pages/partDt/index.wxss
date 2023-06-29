@@ -1,0 +1,54 @@
+/* pages/clinder/index.wxss */
+.container1{
+  width: 100%;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+}
+/* .content1{
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+} */
+.content1 text{
+  color:#514a47;
+} 
+.content1 view {
+  width: 100%;
+  background-color: #c49a74;
+  text-align: center;
+  margin-top: 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #efe3d2;
+  border-radius: 40rpx;
+}
+.content1 .tx{
+  background-color: #aa0202;
+}
+image {
+  position: absolute;
+  
+  left: 0;
+  
+  bottom: 200rpx;
+  
+  display: block;
+  
+  width: 100%;
+  
+  height: 80%;
+  
+  z-index:1;
+  
+  }
+
+  .kf{
+    position: absolute;
+    left: 0;
+    text-align: center;
+    bottom: 150rpx; 
+    display: block;
+    width: 100%;
+  }

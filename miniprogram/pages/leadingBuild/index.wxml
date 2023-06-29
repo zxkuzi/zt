@@ -1,0 +1,38 @@
+<view class="container">
+  <!--导航条-->
+  <view class="navbar">
+    <text wx:for="{{navbar}}" data-idx="{{index}}" data-itemdata="{{item}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap"><text class="innerClass">{{item}}</text></text>
+  </view>
+
+  <!--搜索-->
+  <block>
+    <view wx:for="{{leadingBuildData}}" wx:key="index">
+      <!-- <view>
+        <image src="{{item.imgUrl}}" class="imgContainer"></image>
+      </view> -->
+      <view class="page-body">
+    <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{leadingBuildData}}" wx:key="*this">
+          <swiper-item style="position: relative;" wx:for="{{item.imgUrl}}" wx:for-item="pro" wx:key="idx">
+            <view class="swiper-item {{pro}}">
+              <image src="{{pro.imgSrc}}" class="imgContainer"></image>
+              
+          </view>
+          <view class="text-swiper">{{pro.textSwiper}}</view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+      
+      <!-- <view class="swiper-title"> {{item.title}}</view> -->
+      <view class="textContent">
+        <text class="content" user-select="true">{{ item.content }}</text>
+      </view>
+      
+    </view>
+   
+  </block>
+</view>

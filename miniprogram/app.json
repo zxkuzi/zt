@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/shouye/index",
+    "pages/clinder/index",
+    "pages/start/index",
+    "pages/index/index",
+    "pages/addInfo/index",  
+    "pages/suggestion/index",
+    "pages/leadingBuild/index",
+    
+    "pages/login/index",   
+    "pages/home/index",
+    "pages/infoCollection/index",
+    "pages/sortType/index",
+    "pages/partDt/index",
+    
+    "pages/temp/index"
+  ],
+  "tabBar": {
+    "color": "#ccd7d9",
+    "selectedColor": "#aa0202",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/shouye/index",
+        "text": "首页",
+        "iconPath": "./images/home.png",
+        "selectedIconPath": "./images/home1.png"
+      },
+      {
+        "pagePath": "pages/sortType/index",
+        "text": "分类",
+        "iconPath": "./images/fl.png",
+        "selectedIconPath": "./images/fl1.png"
+      },
+      {
+        "pagePath": "pages/partDt/index",
+        "text": "园区动态",
+        "iconPath": "./images/part.png",
+        "selectedIconPath": "./images/part1.png"
+      },
+      {
+        "pagePath": "pages/clinder/index",
+        "text": "日历",
+        "iconPath": "./images/rl.png",
+        "selectedIconPath": "./images/rl1.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "郑投科技产业园",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents"
+}

@@ -1,0 +1,34 @@
+<!--pages/infoCollection/index.wxml-->
+<view class="container">
+  <view class="content" wx:if="{{!flag}}">
+    <image class="lxh" src="cloud://zt-industrial-part-2dp7h26c5ff86.7a74-zt-industrial-part-2dp7h26c5ff86-1304549895/shouyeSwiper/lxh2.jpg" mode=""/>
+    <view bindtap="goToaddInfo" class="tx" data-buttonTxt="{{buttonText}}">{{buttonText}}</view>
+    
+    
+  </view>
+  
+  <view  wx:if="{{flag}}">
+    <scroll-view scroll-y="true">
+      <view class="item-pic" wx:for="{{userInfoArr}}" wx:key="index">
+        <view class="pic-contanier">
+          <view class="pic-contanier1">
+            <view class="name">{{ item.companyName }}</view>
+            <view class="name">{{ item.companyNo }}</view>
+            <view class="type iconfont {{item.type=='智能制造类' ? 'zz icon-zhinengzhizao' : item.type=='电子商务类' ? 'dz icon-dianzishangwu' : item.type=='科技类' ? 'kj icon-10kejichuangxin-keji' : 'icon-other' }}">{{ item.type }}</view>
+          </view>
+          
+          <view class="imgPic-container" wx:for="{{item.picList}}" wx:for-item="pro" wx:key="idx">
+            <view class="zhname">{{pro[0].zhname }}</view>
+            <view style="display: flex;" class="afterC"> 
+              <view class="imgPic" wx:for="{{pro}}" wx:for-item="pro1" wx:key="idx1">
+                <image bindtap="previewImage" data-url="{{pro1.url}}" src="{{pro1.url}}" alt=""></image>
+            </view>
+            </view>
+            
+          </view>
+
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
